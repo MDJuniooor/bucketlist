@@ -1,0 +1,33 @@
+.Container {
+    width:94%;
+    padding:0 1%;
+    margin: 0 2%;
+    justify-content:center;
+    
+}
+
+.Content {
+    display: inline-block;
+    position:relative;
+    vertical-align: middle;
+    margin: 0 auto;    
+    text-align: center;
+}
+
+.BannerImage {
+    width:90%;
+    margin:auto;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color:rgba(0, 0, 0, 0.8);
+  z-index:100;
+}
+
+.slick-prev {
+    margin-left: 1%;
+}
+.slick-next {
+    margin-right: 2%;
+}

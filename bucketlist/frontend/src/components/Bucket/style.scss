@@ -1,0 +1,99 @@
+.Bucket{
+    float:left;
+    background-color:white;
+    width:23.3333%;
+    margin: 5%;
+    justify-content: space-between;
+    align-items:flex-start;
+    flex-wrap:wrap;
+    margin-bottom:50px;
+    text-overflow: ellipsis;
+    box-shadow: 0 8px 38px rgba(133, 133, 133, 0.3), 0 5px 12px rgba(133, 133, 133,0.22);
+}
+
+.Bucket__Column1{
+    width:100%;
+    box-sizing:border-box;
+    text-overflow: ellipsis;
+    position: relative;
+    padding-top:100%;
+    overflow:hidden;
+}
+
+.Bucket__Column1 .centered {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.Bucket__Column1 .Bucketimg {
+    position:absolute;
+    width:100%;
+    max-width: 100%;
+    height: auto;
+    top:0;
+    left:0;
+    -webkit-transform:translate(50%,50%);
+    -ms-transform: translate(50%,50%); 
+    transform: translate(50%,50%);
+}
+.Bucket__Column2{
+    padding:20px;
+    margin:0 auto;
+}
+
+.Bucket h1{
+    font-size:20px;
+    font-weight: 600;
+}
+
+.Bucket .Bucket__Genres{
+    display: flex;
+    flex-wrap:wrap;
+    margin-bottom:20px;
+}
+
+.Bucket__Genres .Bucket__Genre{
+    margin-right:10px;
+    color:#B4B5BD;
+}
+
+.Bucket .Bucket__Synopsis {
+    text-overflow: ellipsis;
+    color:#B4B5BD;
+    overflow: hidden;
+}
+
+.Bucket .Bucket__Poster{
+    max-width: 100%;
+    display: block;
+    margin:0 auto;
+}
+
+@media screen and (min-width:320px) and (max-width:667px){
+    .Bucket{
+        width:100%;
+    }
+}
+
+@media screen and (min-width:320px) and (max-width:667px) and (orientation: portrait){
+    .Bucket{
+        width:100%;
+        flex-direction: column;
+    }
+    .Bucket__Poster{
+        top:0;
+        left:0;
+        width:100%;
+    }
+    .Bucket__Column{
+        width:100%!important;
+    }
+}
+
+.Like {
+    float:right;
+    margin-right:5px;
+}

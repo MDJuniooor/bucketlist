@@ -1,0 +1,49 @@
+
+.Footer {
+  text-align: center;
+  padding-top:2rem;
+  padding-bottom: 6rem;
+}
+
+.Footer h1 {
+  font-size:1.3rem;
+  font-weight: 300;
+}
+.Footer h2 {
+    font-size:1.3rem;
+    font-weight: 200;
+    margin-bottom: 5%;
+}
+
+.Footer h1 strong {
+  color:black;
+  font-weight: 400;
+}
+
+.Footer h1 a {
+  color:rgba(0,0,0,0.5);
+  text-decoration: none;
+  border-bottom:1px dotted rgba(0,0,0,0.5);
+}
+
+.Footer ul.Icons {
+    padding:0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.Footer ul.Icons .Icon{
+    display:inline-block;
+    padding : 0 1%;
+}
+
+i.icono-instagram, i.icono-facebook {
+    color:rgba(0,0,0,0.5);
+}
+
+.Logo {
+    margin: 0 auto;
+    padding: 1%;
+    font-family: 'Monoton', cursive;
+    text-align: center;
+}
