@@ -7,7 +7,6 @@ name = "pypi"
 
 [packages]
 
-cookiecutter = "*"
 pytz = "==2018.3"
 awesome-slugify = "==1.6.5"
 pillow = "==5.0.0"
@@ -33,13 +32,13 @@ django-debug-toolbar = "==1.9.1"
 django-extensions = "==2.0.5"
 django-coverage-plugin = "==1.5.0"
 pytest-django = "==3.1.2"
+awsebcli = "*"
 django-taggit = "*"
-djangorestframework = "*"
 django-taggit-serializer = "*"
+djangorestframework = "*"
 django-cors-headers = "*"
 djangorestframework-jwt = "*"
 django-rest-auth = "*"
-awsebcli = "*"
 
 
 [dev-packages]
