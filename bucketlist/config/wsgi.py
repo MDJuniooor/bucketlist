@@ -35,8 +35,15 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings.production")
 # This application object is used by any WSGI server configured to use this
 # file. This includes Django's development server, if the WSGI_APPLICATION
 # setting points here.
-application = get_wsgi_application()
+# application = get_wsgi_application()
 
 # Apply WSGI middleware here.
 # from helloworld.wsgi import HelloWorldApplication
 # application = HelloWorldApplication(application)
+
+
+def application(environ, start_response):
+    if environ['mod_wsgi.process_group'] != '':
+        import signal
+        os.kill(os.getpid(), signal.SIGINT)
+    return ["killed"]
