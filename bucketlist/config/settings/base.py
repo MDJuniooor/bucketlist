@@ -77,7 +77,6 @@ THIRD_PARTY_APPS = [
     'taggit_serializer', # Tags serializer
     'rest_framework',
     'corsheaders', # connect to React
-    'storages'
 ]
 LOCAL_APPS = [
     'bucketlist.users.apps.UsersConfig',
