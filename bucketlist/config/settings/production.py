@@ -87,6 +87,7 @@ _AWS_EXPIRY = 60 * 60 * 24 * 7
 AWS_S3_OBJECT_PARAMETERS = {
     'CacheControl': f'max-age={_AWS_EXPIRY}, s-maxage={_AWS_EXPIRY}, must-revalidate',
 }
+
 from storages.backends.s3boto3 import S3Boto3Storage
 
 
@@ -122,14 +123,14 @@ TEMPLATES[0]['OPTIONS']['loaders'] = [  # noqa F405
 # EMAIL
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#default-from-email
-DEFAULT_FROM_EMAIL = env(
-    'DJANGO_DEFAULT_FROM_EMAIL',
-    default='bucketList <noreply@example.com>'
-)
+#DEFAULT_FROM_EMAIL = env(
+#    'DJANGO_DEFAULT_FROM_EMAIL',
+#    default='bucketList <noreply@example.com>'
+#)
 # https://docs.djangoproject.com/en/dev/ref/settings/#server-email
-SERVER_EMAIL = env('DJANGO_SERVER_EMAIL', default=DEFAULT_FROM_EMAIL)
+#SERVER_EMAIL = env('DJANGO_SERVER_EMAIL', default=DEFAULT_FROM_EMAIL)
 # https://docs.djangoproject.com/en/dev/ref/settings/#email-subject-prefix
-EMAIL_SUBJECT_PREFIX = env('DJANGO_EMAIL_SUBJECT_PREFIX', default='[bucketList]')
+#EMAIL_SUBJECT_PREFIX = env('DJANGO_EMAIL_SUBJECT_PREFIX', default='[bucketList]')
 
 # ADMIN
 # ------------------------------------------------------------------------------
