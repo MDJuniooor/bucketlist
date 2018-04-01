@@ -38,7 +38,7 @@ djangorestframework = "*"
 django-cors-headers = "*"
 djangorestframework-jwt = "*"
 django-rest-auth = "*"
-"psycopg2" = "*"
+"psycopg2-binary" = "*"
 
 
 [dev-packages]
