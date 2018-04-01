@@ -8,18 +8,18 @@ from .base import env
 # https://docs.djangoproject.com/en/dev/ref/settings/#secret-key
 SECRET_KEY = env('DJANGO_SECRET_KEY')
 # https://docs.djangoproject.com/en/dev/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '52.79.136.178', '13.125.143.20']
+ALLOWED_HOSTS = ['*']
 
 # DATABASES
 # ------------------------------------------------------------------------------
 DATABASES = {
-    'default' : {
-        'ENGINE' : 'django.db.backends.postgresql_psycopg2',
-        'NAME' : env('RDS_DB_NAME'),
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': env('RDS_DB_NAME'),
         'USER': env('RDS_DB_USERNAME'),
-        'PASSWORD' : env('RDS_DB_PASSWORD'),
-        'HOST' : env('RDS_DB_HOSTNAME'),
-        'PORT' : env('RDS_DB_PORT'),
+        'PASSWORD': env('RDS_DB_PASSWORD'),
+        'HOST': env('RDS_DB_HOSTNAME'),
+        'PORT': env('RDS_DB_PORT'),
     }
 }
 
@@ -90,8 +90,8 @@ AWS_S3_OBJECT_PARAMETERS = {
 
 # STATIC
 # ------------------------
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
+STATIC_URL = 'https://s3.amazonaws.com/%s/static/' % AWS_STORAGE_BUCKET_NAME
+STATICFILES_STORAGE = 'config.settings.production.StaticRootS3BotoStorage'
 # MEDIA
 # ------------------------------------------------------------------------------
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
